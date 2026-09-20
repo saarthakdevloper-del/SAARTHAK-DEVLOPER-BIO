@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SAARTHAK DEVLOPER | My Bio</title>
+
+<style>
+
+/* ===== BASIC SETTINGS ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg: #050d1b;
+    --card: #0b1729;
+    --text: #f5f7ff;
+    --muted: #b6c5d8;
+    --blue: #08b9f7;
+    --purple: #8b42ff;
+    --green: #00d6a0;
+    --orange: #ff9e36;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* ===== NAVBAR ===== */
+
+header {
+    background: rgba(5, 13, 27, 0.97);
+    border-bottom: 1px solid #1b2b42;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1400px;
+    margin: auto;
+    padding: 18px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.logo .blue {
+    color: var(--blue);
+}
+
+.logo .purple {
+    color: var(--purple);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    font-size: 14px;
+    color: #e5eaf5;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--blue);
+}
+
+.menu-btn {
+    display: none;
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+
+/* ===== HERO SECTION ===== */
+
+.hero {
+    min-height: 440px;
+    padding: 60px 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+
+    background:
+        radial-gradient(
+            ellipse at 75% 50%,
+            rgba(20, 67, 150, 0.20),
+            transparent 45%
+        ),
+        linear-gradient(120deg, #06101f, #08152b);
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 550px;
+}
+
+.hello {
+    color: #d1def2;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 5vw, 65px);
+    line-height: 1.1;
+    margin-bottom: 15px;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, var(--blue), var(--purple));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero h2 {
+    font-size: 21px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--muted);
+}
+
+.tagline {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 21px;
+    font-weight: bold;
+    font-style: italic;
+
+    background: linear-gradient(90deg, var(--blue), var(--purple));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+
+/* ===== SOCIAL ICONS WITH NAMES ===== */
+
+.social-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 25px;
+}
+
+.social-links a {
+    width: 78px;
+    min-height: 78px;
+    padding: 9px 5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    background: #101e33;
+    border: 1px solid #243955;
+    border-radius: 13px;
+
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(135deg, #087ff5, #813eff);
+    border-color: transparent;
+}
+
+.social-links img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+.social-links span {
+    font-size: 11px;
+    color: white;
+    text-align: center;
+    font-weight: 600;
+}
+
+
+/* ===== PROFILE PHOTO ===== */
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-ring {
+    width: 290px;
+    height: 290px;
+    padding: 8px;
+    border-radius: 50%;
+
+    background: linear-gradient(135deg, var(--blue), var(--purple));
+
+    box-shadow: 0 0 35px rgba(0, 155, 255, 0.15);
+}
+
+.profile-ring img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--bg);
+    background: #16243a;
+}
+
+.hero-decoration {
+    flex: 0.5;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 1.5;
+
+    background: linear-gradient(135deg, var(--blue), var(--purple));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    transform: rotate(-8deg);
+}
+
+
+/* ===== MAIN CONTENT ===== */
+
+.container {
+    max-width: 1400px;
+    margin: auto;
+    padding: 40px 30px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.card {
+    min-width: 0;
+    padding: 25px;
+
+    background: linear-gradient(145deg, #0d1b30, #091322);
+    border: 1px solid #1c3552;
+    border-radius: 15px;
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--blue);
+    box-shadow: 0 10px 30px rgba(0, 153, 255, 0.08);
+}
+
+.card-heading {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 22px;
+}
+
+.card-icon {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 23px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #087ff5, #813eff);
+}
+
+.card h3 {
+    font-size: 21px;
+}
+
+.card p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* ===== ABOUT ME ===== */
+
+.about-card {
+    border-top: 2px solid var(--blue);
+}
+
+.about-details {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.detail {
+    color: #c4d4e8;
+    font-size: 14px;
+}
+
+.detail span {
+    color: var(--blue);
+    margin-right: 8px;
+}
+
+
+/* ===== SKILLS ===== */
+
+.skills-card {
+    border-top: 2px solid var(--purple);
+}
+
+.skill {
+    margin-bottom: 20px;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.skill-info span:last-child {
+    color: var(--blue);
+}
+
+.skill-bar {
+    width: 100%;
+    height: 8px;
+    background: #1c304b;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    border-radius: 20px;
+    background: linear-gradient(90deg, var(--blue), var(--purple));
+}
+
+
+/* ===== HOBBIES ===== */
+
+.hobbies-card {
+    border-top: 2px solid var(--green);
+}
+
+.hobby-list {
+    list-style: none;
+}
+
+.hobby-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 23px;
+    font-size: 15px;
+    color: #dce6f5;
+}
+
+.hobby-icon {
+    font-size: 22px;
+}
+
+
+/* ===== EDUCATION ===== */
+
+.education-card {
+    border-top: 2px solid var(--orange);
+}
+
+.timeline {
+    border-left: 2px solid #34506e;
+    margin-left: 8px;
+    padding-left: 22px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.timeline-item::before {
+    content: "";
+
+    position: absolute;
+    left: -29px;
+    top: 5px;
+
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+
+    background: var(--orange);
+}
+
+.timeline-item h4 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.timeline-item p {
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* ===== CONTACT SECTION ===== */
+
+.contact-section {
+    margin-top: 35px;
+    padding: 35px 20px;
+
+    text-align: center;
+
+    background: linear-gradient(145deg, #0d1b30, #091322);
+    border: 1px solid #1c3552;
+    border-radius: 15px;
+}
+
+.contact-section h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.contact-section h2 span {
+    color: var(--blue);
+}
+
+.contact-section p {
+    color: var(--muted);
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+.contact-section .social-links {
+    justify-content: center;
+}
+
+
+/* ===== FOOTER ===== */
+
+footer {
+    text-align: center;
+    padding: 35px 20px;
+
+    background:
+        radial-gradient(
+            ellipse at bottom,
+            rgba(91, 48, 170, 0.22),
+            transparent 65%
+        ),
+        #050d1b;
+
+    border-top: 1px solid #1c2c43;
+}
+
+.footer-small {
+    color: var(--blue);
+    letter-spacing: 5px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+footer h2 {
+    font-size: 32px;
+    font-style: italic;
+    margin: 15px 0;
+
+    background: linear-gradient(90deg, var(--blue), var(--purple));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+footer p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+footer .heart {
+    color: #ff426d;
+}
+
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+@media (max-width: 1100px) {
+
+    .hero {
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .hero-content {
+        max-width: 650px;
+    }
+
+    .hero p {
+        margin: auto;
+    }
+
+    .hero-content .social-links {
+        justify-content: center;
+    }
+
+    .hero-decoration {
+        display: none;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .navbar {
+        padding: 15px 12px;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+
+        background: #081426;
+
+        display: none;
+        flex-direction: column;
+        gap: 0;
+
+        padding: 10px 20px 20px;
+
+        border-bottom: 1px solid #20334d;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        width: 100%;
+        padding: 14px;
+        text-align: center;
+        border-bottom: 1px solid #15253a;
+    }
+
+    .hero {
+        padding: 45px 18px;
+        gap: 30px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero h2 {
+        font-size: 17px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .profile-ring {
+        width: 230px;
+        height: 230px;
+    }
+
+    .container {
+        padding: 25px 16px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 22px;
+    }
+
+    .social-links {
+        gap: 10px;
+    }
+
+    .social-links a {
+        width: 70px;
+        min-height: 72px;
+    }
+
+    footer h2 {
+        font-size: 26px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ===== NAVBAR ===== -->
+
+<header>
+
+    <nav class="navbar">
+
+        <a href="#home" class="logo">
+            &lt;/&gt; SAARTHAK
+            <span class="purple">DEVLOPER</span>
+        </a>
+
+        <button class="menu-btn" id="menuBtn"
+                aria-label="Toggle navigation">
+            ☰
+        </button>
+
+        <div class="nav-links" id="navLinks">
+
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#hobbies">Hobbies</a>
+            <a href="#contact">Contact</a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ===== HERO SECTION ===== -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="hello">
+            Hello, I'm 👋
+        </div>
+
+        <h1>
+            Saarthak <span class="gradient-text">Developer</span>
+        </h1>
+
+        <h2>
+            Developer | Learner | Dreamer
+        </h2>
+
+        <p>
+            I am a passionate developer who loves to create useful
+            things with technology. I believe in learning new things
+            every day and building a better future.
+        </p>
+
+        <div class="tagline">
+            Small Steps → Big Dreams
+        </div>
+
+
+        <!-- SOCIAL MEDIA ICONS WITH NAMES -->
+
+        <div class="social-links">
+
+            <a href="https://t.me/NEXAMODZ_OFC_1"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Telegram">
+
+                <img src="telegram.jpg" alt="Telegram">
+
+                <span>Telegram</span>
+
+            </a>
+
+
+            <a href="https://youtube.com/@saarthakdevloper?si=TrvARrm_oxWfpMDS"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="YouTube">
+
+                <img src="youtube.jpg" alt="YouTube">
+
+                <span>YouTube</span>
+
+            </a>
+
+
+            <a href="https://instagram.com/"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Instagram">
+
+                <img src="instagram.jpg" alt="Instagram">
+
+                <span>Instagram</span>
+
+            </a>
+
+
+            <a href="https://github.com/"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="GitHub">
+
+                <img src="github.jpg" alt="GitHub">
+
+                <span>GitHub</span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- PROFILE PHOTO -->
+
+    <div class="hero-image">
+
+        <div class="profile-ring">
+
+            <img src="profile.jpg"
+                 alt="Saarthak Developer Profile Photo">
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-decoration">
+        Code<br>
+        Create<br>
+        Grow
+    </div>
+
+</section>
+
+
+
+<!-- ===== MAIN CONTENT ===== -->
+
+<main class="container">
+
+    <div class="cards">
+
+
+        <!-- ABOUT ME -->
+
+        <section class="card about-card" id="about">
+
+            <div class="card-heading">
+
+                <div class="card-icon">👤</div>
+
+                <h3>About Me</h3>
+
+            </div>
+
+            <p>
+                Hi, I'm Saarthak Developer, a developer and technology
+                enthusiast. I love coding, designing and exploring
+                new technologies. My goal is to build innovative
+                solutions and keep improving my skills.
+            </p>
+
+            <div class="about-details">
+
+                <div class="detail">
+                    <span>📍</span> India
+                </div>
+
+                <div class="detail">
+                    <span>🎓</span> Student / Developer
+                </div>
+
+                <div class="detail">
+                    <span>💻</span> Coding & Technology
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- SKILLS -->
+
+        <section class="card skills-card" id="skills">
+
+            <div class="card-heading">
+
+                <div class="card-icon">⌨</div>
+
+                <h3>My Skills</h3>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-info">
+                    <span>HTML</span>
+                    <span>90%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width:90%"></div>
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-info">
+                    <span>CSS</span>
+                    <span>85%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width:85%"></div>
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-info">
+                    <span>JavaScript</span>
+                    <span>75%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width:75%"></div>
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-info">
+                    <span>Sketchware</span>
+                    <span>70%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width:70%"></div>
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-info">
+                    <span>Android Studio</span>
+                    <span>65%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width:65%"></div>
+                </div>
+
+            </div>
+
+            <p>
+                Skill percentages are examples. Edit them according
+                to your actual experience.
+            </p>
+
+        </section>
+
+
+
+        <!-- HOBBIES -->
+
+        <section class="card hobbies-card" id="hobbies">
+
+            <div class="card-heading">
+
+                <div class="card-icon">🎮</div>
+
+                <h3>My Hobbies</h3>
+
+            </div>
+
+            <ul class="hobby-list">
+
+                <li>
+                    <span class="hobby-icon">💻</span>
+                    Coding & Developing
+                </li>
+
+                <li>
+                    <span class="hobby-icon">🎵</span>
+                    Listening to Music
+                </li>
+
+                <li>
+                    <span class="hobby-icon">🎮</span>
+                    Gaming
+                </li>
+
+                <li>
+                    <span class="hobby-icon">💡</span>
+                    Exploring New Tech
+                </li>
+
+                <li>
+                    <span class="hobby-icon">👨‍👩‍👦</span>
+                    Spending Time with Family
+                </li>
+
+            </ul>
+
+        </section>
+
+
+
+        <!-- EDUCATION -->
+
+        <section class="card education-card" id="education">
+
+            <div class="card-heading">
+
+                <div class="card-icon">🎓</div>
+
+                <h3>Education</h3>
+
+            </div>
+
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+
+                    <h4>High School</h4>
+
+                    <p>
+                        Add your school name<br>
+                        Add your passing year
+                    </p>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <h4>Intermediate</h4>
+
+                    <p>
+                        Add your school name<br>
+                        Add your passing year
+                    </p>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <h4>Graduation</h4>
+
+                    <p>
+                        Add your degree<br>
+                        Add your college and years
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </div>
+
+
+
+    <!-- ===== CONTACT SECTION ===== -->
+
+    <section class="contact-section" id="contact">
+
+        <h2>
+            Contact <span>Me</span>
+        </h2>
+
+        <p>
+            Have a question or want to connect with me?<br>
+            Feel free to contact me through my social media.
+        </p>
+
+
+        <div class="social-links">
+
+
+            <a href="https://t.me/SAARTHAKDEVLOPER"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Telegram">
+
+                <img src="telegram.jpg" alt="Telegram">
+
+                <span>Telegram</span>
+
+            </a>
+
+
+            <a href="https://youtube.com/"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="YouTube">
+
+                <img src="youtube.jpg" alt="YouTube">
+
+                <span>YouTube</span>
+
+            </a>
+
+
+            <a href="https://instagram.com/"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Instagram">
+
+                <img src="instagram.jpg" alt="Instagram">
+
+                <span>Instagram</span>
+
+            </a>
+
+
+            <a href="https://github.com/"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="GitHub">
+
+                <img src="github.jpg" alt="GitHub">
+
+                <span>GitHub</span>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- ===== FOOTER ===== -->
+
+<footer>
+
+    <div class="footer-small">
+        KEEP CODING
+    </div>
+
+    <h2>
+        Better Than Yesterday
+    </h2>
+
+    <p>
+        Made with <span class="heart">♥</span> by Saarthak Developer
+    </p>
+
+    <p>
+        © <span id="year"></span>
+        SAARTHAK DEVLOPER. All rights reserved.
+    </p>
+
+</footer>
+
+
+
+<!-- ===== JAVASCRIPT ===== -->
+
+<script>
+
+// Mobile navigation menu
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", function () {
+
+    navLinks.classList.toggle("active");
+
+    if (navLinks.classList.contains("active")) {
+        menuBtn.textContent = "✕";
+    } else {
+        menuBtn.textContent = "☰";
+    }
+
+});
+
+
+// Close menu after clicking a navigation link
+
+document.querySelectorAll(".nav-links a").forEach(function (link) {
+
+    link.addEventListener("click", function () {
+
+        navLinks.classList.remove("active");
+        menuBtn.textContent = "☰";
+
+    });
+
+});
+
+
+// Automatically update copyright year
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
